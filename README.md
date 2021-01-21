@@ -16,3 +16,7 @@ Although this is mounted as read-only, it is not recommended that you mount your
 `docker compose up -d ssh`
 
 Then use ssh as you normally would. Enjoy!
+
+## License
+
+See LICENSE file. I chose MIT because I didn't do much here except glue awesome code together. License selected using <https://choosealicense.com/> -- a very handy tool!
