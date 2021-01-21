@@ -2,7 +2,9 @@ services:
   ssh:
     container_name: ssh
     working_dir: /main
-    command: sh -c "apk add openssh; cp -r /root/.ssh/ /root/.ssh/ && chmod 0400 /root/.ssh/* && cd ~; sh"
-    image: alpine:latest
+    command: sh -c "cp -r /root/.ssh/ /root/.ssh/ && chmod 0400 /root/.ssh/* && cd ~; sh"
+    build:
+      context: ./
+      dockerfile: Dockerfile
     volumes:
       - /home/${USER}/.ssh:/root/.ssh/:ro
